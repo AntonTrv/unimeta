@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    background-color: #1C203D;
+    color: #D5CFE1;
+    height: 100vh;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.light {
+    background-color: #282B4A ;
+}
+
+.meta {
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.search-field {
+    width: calc(100%/12*4);
+}
+
+.total {
+    padding: 25px 0 0 26px;
+    background-color: #202030;
+    height: 6vh;
+
+}
+
+/*#282B4A side*/
+/*#1C203D*/

@@ -1,0 +1,70 @@
+.funnel-data-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100%/12*8);
+
+  .bar {
+    height: 39px;
+    display: flex;
+    align-items: center;
+    background-color: #282B4A;
+
+    .status-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .status {
+      padding: 0 10px 0 20px;
+    }
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+
+  .green {
+    background-color: green;
+
+  }
+
+  .red {
+    background-color: red;
+
+    a {
+      color: white;
+    }
+
+  }
+
+  .screenshot-wrapper {
+    max-width: 95%;
+    margin: 0 auto;
+    order: 1;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .funnel-meta {
+    order: 2;
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .tag {
+    border-radius: 15px;
+    background-color: #1C203D;
+    padding: 10px 17px;
+    margin: 10px;
+  }
+}

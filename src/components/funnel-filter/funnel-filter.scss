@@ -1,0 +1,17 @@
+.filter-wrapper {
+  width: 100%;
+
+  input {
+    width: 100%;
+    border-left: none;
+    padding-left: 20px;
+    padding: 10px 0 10px 20px;
+    background-color: #D5CFE1;
+  }
+
+  input:focus {
+    background-color: lavender;
+  }
+
+}
+

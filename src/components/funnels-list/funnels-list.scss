@@ -1,0 +1,25 @@
+.list-wrapper {
+  height: 90vh;
+  max-width: 100%;
+  overflow: scroll;
+}
+
+.list {
+  padding-left: 0px;
+  direction: ltr;
+}
+
+.funnel-li {
+  list-style: none;
+  padding: 7px 0 7px 20px;
+  cursor: pointer;
+}
+
+.funnel-li:nth-child(odd) {
+  background-color: #252546;
+}
+
+.funnel-li:hover {
+  background-color: #202030;
+
+}
