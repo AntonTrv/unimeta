@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import List from './components/funnels-list/funnels-list';
+import FunnelData from "./components/funnel-data/funnel-data";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            funnels: [],
+            activeFunnel: []
+        }
+    }
+
+    componentDidMount = () => {
+        fetch('https://bitcoin-blueprint-app.com/funnels')
+            .then(response => response.json())
+            .then(data => this.setState({funnels: data,
+                                                activeFunnel: data[0]}))
+    }
+
+    handleClick = (event) => {
+        let choice = this.state.funnels.filter(funnel => funnel.site === event.target.value);
+        this.setState({activeFunnel: choice[0]})
+
+
+    }
+    render() {
+        const {funnels,activeFunnel} = this.state;
+        return(
+            <div className="App">
+                <List funnels={funnels} handleClick={this.handleClick}/>
+                <FunnelData activeFunnel={activeFunnel} total={funnels.length}/>
+            </div>
+        )
+    }
 }
 
 export default App;
