@@ -2,7 +2,7 @@
   "name": "unilanding-meta",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://antontrv.github.io/",
+  "homepage": "https://antontrv.github.io/unimeta",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
