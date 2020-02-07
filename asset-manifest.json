@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/unimeta/static/css/main.1ce73382.chunk.css",
+    "main.js": "/unimeta/static/js/main.10e5409d.chunk.js",
+    "main.js.map": "/unimeta/static/js/main.10e5409d.chunk.js.map",
+    "runtime-main.js": "/unimeta/static/js/runtime-main.f0c1bd18.js",
+    "runtime-main.js.map": "/unimeta/static/js/runtime-main.f0c1bd18.js.map",
+    "static/js/2.3fb07c7e.chunk.js": "/unimeta/static/js/2.3fb07c7e.chunk.js",
+    "static/js/2.3fb07c7e.chunk.js.map": "/unimeta/static/js/2.3fb07c7e.chunk.js.map",
+    "index.html": "/unimeta/index.html",
+    "precache-manifest.09b8e9a5e95dd1472ad1f82b6f2c1481.js": "/unimeta/precache-manifest.09b8e9a5e95dd1472ad1f82b6f2c1481.js",
+    "service-worker.js": "/unimeta/service-worker.js",
+    "static/css/main.1ce73382.chunk.css.map": "/unimeta/static/css/main.1ce73382.chunk.css.map",
+    "static/js/2.3fb07c7e.chunk.js.LICENSE": "/unimeta/static/js/2.3fb07c7e.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0c1bd18.js",
+    "static/js/2.3fb07c7e.chunk.js",
+    "static/css/main.1ce73382.chunk.css",
+    "static/js/main.10e5409d.chunk.js"
+  ]
+}
