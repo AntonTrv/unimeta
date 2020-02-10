@@ -32,5 +32,35 @@
 
 }
 
-/*#282B4A side*/
-/*#1C203D*/
+.total_mob {
+    display: none;
+}
+
+@media screen and (max-width: 599px) {
+    .App {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .search-field {
+        width: calc(100%/12*12);
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .funnel-data-wrapper {
+        width: calc(100%/12*12) !important;
+    }
+    .total {
+        display: none;
+    }
+
+    .total_mob {
+        display: block;
+        height: 40px;
+        text-align: center;
+        padding: 10px 0 10px;
+    }
+
+}

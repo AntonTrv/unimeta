@@ -11,7 +11,36 @@ class App extends Component{
         this.state = {
             funnels: [],
             activeFunnel: {},
-            input: []
+            input: [],
+            configs: {"PAGE_TITLE": "btc-traderapp.com",
+                "TEMPLATE_NAME": "btc-traderapp.com",
+                "TRANSLATIONS_TYPE": "JSON",
+                "TRANSLATIONS_MODE": "COUNTRY",
+                "SUPPORTED_LANGUAGES": "DA,DE-AT,DE-CH,DE,EN,ES,ET,FI,FO,FR,IT,LT,LV,NL,NO,PL,PT,RU,SK,SL,SV",
+                "CUSTOM_MAP_LANGUAGES": {
+                    "MD": "RU",
+                    "UA": "RU",
+                    "GE": "RU",
+                    "AT": "DE",
+                    "CL": "ES",
+                    "AR": "ES",
+                    "BR": "PT",
+                    "CO": "ES",
+                    "CR": "ES",
+                    "DO": "ES",
+                    "EC": "ES",
+                    "SV": "ES",
+                    "MX": "ES",
+                    "PA": "ES",
+                    "PE": "ES",
+                    "PR": "ES",
+                    "VE": "ES",
+                    "DK": "DA",
+                    "CH": "DE",
+                    "SE": "SV",
+                    "BE": "FR"
+                },
+                "CUSTOMER_ID": [3]}
         }
     }
 
@@ -25,10 +54,6 @@ class App extends Component{
     handleClick = (event) => {
         let choice = this.state.funnels.filter(funnel => funnel.site === event.target.innerText);
         this.setState({activeFunnel: choice[0]})
-        // fetch(`http://${this.state.activeFunnel.domain}/assets/img/screenshot.png`, {mode: 'no-cors'})
-        //     .then(response => console.log(response))
-            // .then(response => this.setState({activeFunnel: Object.assign({}, this.state.activeFunnel, {img: response.url}) }))
-
     }
 
     handleChange = (event) => {
@@ -36,15 +61,16 @@ class App extends Component{
         this.setState({input: filtered})
     }
     render() {
-        const {funnels,activeFunnel,input} = this.state;
+        const {funnels,activeFunnel,input,configs} = this.state;
         return(
             <div className="App">
+                <div className='total total_mob'><b>Total:</b> {input.length ? input.length :funnels.length}</div>
                 <div className="search-field">
                 <Filter handleChange={this.handleChange}/>
                 <List funnels={funnels}  input={input} handleClick={this.handleClick}/>
                     <div className='total'><b>Total:</b> {input.length ? input.length :funnels.length}</div>
                 </div>
-                <FunnelData activeFunnel={activeFunnel}/>
+                <FunnelData activeFunnel={activeFunnel} configs={configs}/>
             </div>
         )
     }

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: calc(100%/12*8);
+  overflow-y: scroll;
 
   .bar {
     height: 39px;
@@ -16,6 +17,10 @@
 
     .status {
       padding: 0 10px 0 20px;
+
+      a {
+        color: white;
+      }
     }
   }
 
@@ -39,10 +44,14 @@
 
   }
 
+  .meta-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .screenshot-wrapper {
     max-width: 95%;
     margin: 0 auto;
-    order: 1;
     height: 350px;
     display: flex;
     justify-content: center;
@@ -54,7 +63,6 @@
   }
 
   .funnel-meta {
-    order: 2;
     display: flex;
 
     flex-wrap: wrap;
@@ -62,9 +70,23 @@
   }
 
   .tag {
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 15px;
     background-color: #1C203D;
     padding: 10px 17px;
     margin: 10px;
+  }
+}
+
+.custom_map {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+
+  .custom_language {
+    list-style: none;
+    margin: auto 5px auto 0;
+
   }
 }
