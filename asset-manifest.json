@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/unimeta/static/css/main.6812e004.chunk.css",
-    "main.js": "/unimeta/static/js/main.3f3d4c39.chunk.js",
-    "main.js.map": "/unimeta/static/js/main.3f3d4c39.chunk.js.map",
+    "main.js": "/unimeta/static/js/main.1bea0ba5.chunk.js",
+    "main.js.map": "/unimeta/static/js/main.1bea0ba5.chunk.js.map",
     "runtime-main.js": "/unimeta/static/js/runtime-main.f0c1bd18.js",
     "runtime-main.js.map": "/unimeta/static/js/runtime-main.f0c1bd18.js.map",
-    "static/js/2.2d81ba21.chunk.js": "/unimeta/static/js/2.2d81ba21.chunk.js",
-    "static/js/2.2d81ba21.chunk.js.map": "/unimeta/static/js/2.2d81ba21.chunk.js.map",
+    "static/js/2.f4e103d1.chunk.js": "/unimeta/static/js/2.f4e103d1.chunk.js",
+    "static/js/2.f4e103d1.chunk.js.map": "/unimeta/static/js/2.f4e103d1.chunk.js.map",
     "index.html": "/unimeta/index.html",
-    "precache-manifest.ac97d810bf7049001e8e2941e78117cd.js": "/unimeta/precache-manifest.ac97d810bf7049001e8e2941e78117cd.js",
+    "precache-manifest.48ff0248b53bd817fd93619d02e2a571.js": "/unimeta/precache-manifest.48ff0248b53bd817fd93619d02e2a571.js",
     "service-worker.js": "/unimeta/service-worker.js",
     "static/css/main.6812e004.chunk.css.map": "/unimeta/static/css/main.6812e004.chunk.css.map",
-    "static/js/2.2d81ba21.chunk.js.LICENSE": "/unimeta/static/js/2.2d81ba21.chunk.js.LICENSE"
+    "static/js/2.f4e103d1.chunk.js.LICENSE": "/unimeta/static/js/2.f4e103d1.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.f0c1bd18.js",
-    "static/js/2.2d81ba21.chunk.js",
+    "static/js/2.f4e103d1.chunk.js",
     "static/css/main.6812e004.chunk.css",
-    "static/js/main.3f3d4c39.chunk.js"
+    "static/js/main.1bea0ba5.chunk.js"
   ]
 }
