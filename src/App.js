@@ -3,7 +3,7 @@ import './App.css';
 import List from './components/funnels-list/funnels-list';
 import FunnelData from "./components/funnel-data/funnel-data";
 import Filter from "./components/funnel-filter/funnel-filter";
-
+import arr from './configs'
 
 class App extends Component{
     constructor(props) {
@@ -12,35 +12,8 @@ class App extends Component{
             funnels: [],
             activeFunnel: {},
             input: [],
-            configs: {"PAGE_TITLE": "btc-traderapp.com",
-                "TEMPLATE_NAME": "btc-traderapp.com",
-                "TRANSLATIONS_TYPE": "JSON",
-                "TRANSLATIONS_MODE": "COUNTRY",
-                "SUPPORTED_LANGUAGES": "DA,DE-AT,DE-CH,DE,EN,ES,ET,FI,FO,FR,IT,LT,LV,NL,NO,PL,PT,RU,SK,SL,SV",
-                "CUSTOM_MAP_LANGUAGES": {
-                    "MD": "RU",
-                    "UA": "RU",
-                    "GE": "RU",
-                    "AT": "DE",
-                    "CL": "ES",
-                    "AR": "ES",
-                    "BR": "PT",
-                    "CO": "ES",
-                    "CR": "ES",
-                    "DO": "ES",
-                    "EC": "ES",
-                    "SV": "ES",
-                    "MX": "ES",
-                    "PA": "ES",
-                    "PE": "ES",
-                    "PR": "ES",
-                    "VE": "ES",
-                    "DK": "DA",
-                    "CH": "DE",
-                    "SE": "SV",
-                    "BE": "FR"
-                },
-                "CUSTOMER_ID": [3]}
+            configs: [...arr],
+            active_configs: {}
         }
     }
 
@@ -48,20 +21,26 @@ class App extends Component{
         fetch('https://bitcoin-blueprint-app.com/funnels')
             .then(response => response.json())
             .then(data => this.setState({funnels: data,
-                                                activeFunnel: data[0]}))
+                                                activeFunnel: data[0],
+                                                active_configs: this.state.configs[0]}))
     }
 
     handleClick = (event) => {
         let choice = this.state.funnels.filter(funnel => funnel.site === event.target.innerText);
-        this.setState({activeFunnel: choice[0]})
+        let choice_config = this.state.configs.filter(config => config.TEMPLATE_NAME === event.target.innerText.split('/')[0]);
+        this.setState({activeFunnel: choice[0], active_configs: choice_config[0]})
     }
 
     handleChange = (event) => {
         let filtered = this.state.funnels.filter(funnel => funnel.site.includes(event.target.value));
         this.setState({input: filtered})
     }
+
     render() {
-        const {funnels,activeFunnel,input,configs} = this.state;
+
+        console.log(this.state.active_configs)
+
+        const {funnels,activeFunnel,input,active_configs} = this.state;
         return(
             <div className="App">
                 <div className='total total_mob'><b>Total:</b> {input.length ? input.length :funnels.length}</div>
@@ -70,7 +49,7 @@ class App extends Component{
                 <List funnels={funnels}  input={input} handleClick={this.handleClick}/>
                     <div className='total'><b>Total:</b> {input.length ? input.length :funnels.length}</div>
                 </div>
-                <FunnelData activeFunnel={activeFunnel} configs={configs}/>
+                <FunnelData activeFunnel={activeFunnel} configs={active_configs}/>
             </div>
         )
     }

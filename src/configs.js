@@ -1,0 +1,1 @@
+/home/anton/main/React-project/configData/configs.js

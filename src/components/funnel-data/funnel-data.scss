@@ -5,7 +5,7 @@
   overflow-y: scroll;
 
   .bar {
-    height: 39px;
+    //height: 39px;
     display: flex;
     align-items: center;
     background-color: #282B4A;
@@ -16,7 +16,7 @@
     }
 
     .status {
-      padding: 0 10px 0 20px;
+      padding: 9px;
 
       a {
         color: white;
@@ -76,6 +76,7 @@
     background-color: #1C203D;
     padding: 10px 17px;
     margin: 10px;
+    align-items: center;
   }
 }
 
