@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c06e51d94079221d20c504a0935d822d",
+    "revision": "bc5f8ccfefd32a446be659f52f818176",
     "url": "/unimeta/index.html"
   },
   {
-    "revision": "83051d7369a1024c90b5",
+    "revision": "77836ed14ee171167978",
     "url": "/unimeta/static/css/main.6812e004.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/unimeta/static/js/2.f4e103d1.chunk.js.LICENSE"
   },
   {
-    "revision": "83051d7369a1024c90b5",
-    "url": "/unimeta/static/js/main.1bea0ba5.chunk.js"
+    "revision": "77836ed14ee171167978",
+    "url": "/unimeta/static/js/main.00cfa097.chunk.js"
   },
   {
     "revision": "fd86a385c70826dcf0dd",
